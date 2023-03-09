@@ -1,0 +1,156 @@
+
+
+<div class="container"> 
+  
+  <h3>Bill</h3> 
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          
+          <label>Name</label>
+          <input class="form-control" type="text" (input)="onNameChange($event.target.value)">
+
+        </div>
+      </div>
+      
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>
+              <b>Name</b>
+            </label>
+            <div>
+              {{name | titlecase}}   
+            </div>        
+          </div>
+        </div> 
+    </div> 
+    
+    <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            
+            <label>Last name</label>
+            <input class="form-control" type="text" (input)="onLastChange($event.target.value)">
+
+          </div>
+        </div>
+        
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>
+                <b>Last name</b>
+              </label>
+              <div>
+                {{lastName | titlecase}}   
+              </div>        
+            </div>
+          </div> 
+    </div> 
+
+    <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              
+              <label>Payment date</label>
+              <input class="form-control" type="date" (input)="onDateChange($event.target.value)">
+    
+            </div>
+          </div>
+          
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>
+                  <b>Payment date</b>
+                </label>
+                <div>
+                  {{date | date:"MMMM d,y" }}   
+                </div>        
+              </div>
+            </div> 
+    </div> 
+
+    <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                
+                <label>Product</label>
+                <input class="form-control" type="text" (input)="onProductChange($event.target.value)">
+      
+              </div>
+            </div>
+            
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>
+                    <b>Product</b>
+                  </label>
+                  <div>
+                    {{product | titlecase}}   
+                  </div>        
+                </div>
+              </div> 
+    </div>    
+
+    <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  
+                  <label>Number</label>
+                  <input class="form-control" type="text" (input)="onNumberChange($event.target.value)">
+        
+                </div>
+              </div>
+              
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>
+                      <b>Number</b>
+                    </label>
+                    <div>
+                      {{number}}   
+                    </div>        
+                  </div>
+                </div> 
+    </div>  
+
+    <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                
+                <label>Cost</label>
+                <input class="form-control" type="text" (input)="onMoneyChange($event.target.value)">
+      
+              </div>
+            </div>
+            
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>
+                    <b>Cost</b>
+                  </label>
+                  <div>
+                    {{money | currency : "€"}}   
+                  </div>        
+                </div>
+              </div> 
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6"></div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>
+              <b>EUR to TRY</b>
+            </label>
+            <div>
+              ₺{{money | exchange}}   
+            </div>        
+          </div>
+        </div> 
+    </div>
+</div>
+
+
+ 
+ 
